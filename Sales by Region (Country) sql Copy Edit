@@ -1,0 +1,5 @@
+SELECT C.Country, SUM(O.TotalAmount) AS Total_Sales
+FROM Orders O
+JOIN Customers C ON O.CustomerID = C.CustomerID
+GROUP BY C.Country
+ORDER BY Total_Sales DESC;
