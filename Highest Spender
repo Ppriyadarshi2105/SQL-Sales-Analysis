@@ -1,0 +1,6 @@
+SELECT C.Name, SUM(O.TotalAmount) AS Total_Spent
+FROM Orders O
+JOIN Customers C ON O.CustomerID = C.CustomerID
+GROUP BY C.Name
+ORDER BY Total_Spent DESC
+LIMIT 3;
