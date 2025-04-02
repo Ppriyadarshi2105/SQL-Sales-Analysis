@@ -1,0 +1,6 @@
+SELECT P.ProductName, SUM(OD.Quantity) AS Total_Sold
+FROM OrderDetails OD
+JOIN Products P ON OD.ProductID = P.ProductID
+GROUP BY P.ProductName
+ORDER BY Total_Sold DESC
+LIMIT 3;
